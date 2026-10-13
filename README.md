@@ -1,9 +1,25 @@
-# 七天把 AI 用成助手
+# 真引 TrueCite
 
-This branch contains the static GitHub Pages build of the finalist demo.
+一个引文核验与 AI 使用判断的交互演示：参考文献看起来完整，怎样确认它确实存在，并且支持正在写的判断？
 
-- Stable static hosting target: GitHub Pages
-- Runtime mode: browser fallback when no backend is available; optional fixed backend can be baked in at build time
-- No API keys, cookies, local credentials, source Word/PDF files, or server secrets are included
-- Default backend: https://ai-assistant-demo-backend.vercel.app
-- Realtime DeepSeek / OpenAlex / Crossref verification is requested from that backend
+[打开演示](https://zeroplus657.github.io/ai-assistant-demo-pages/)
+
+![真引演示首页](docs/preview.png)
+
+## 演示内容
+
+- 从参考文献“查无此文”的场景开始，展示识别、追问与核验。
+- 将找文献、提问、审核、证据对照和校准组织成连续步骤。
+- 展示 Crossref、OpenAlex、DataCite 等学术数据源在核验中的作用。
+
+可以按页面上的顺序浏览，也可以从顶部导航进入具体步骤。仓库名保留原部署地址；当前站点名称为“真引 TrueCite”。
+
+## 运行与状态
+
+本仓库存放 GitHub Pages 的静态前端构建。打开在线演示即可查看；本地可在仓库目录运行：
+
+```sh
+python3 -m http.server 8000
+```
+
+在线检索与模型核验依赖远端服务。页面加载或示例展示成功，不代表某条参考文献已经通过真实来源核验；实际判断应以返回的来源与可回查证据为准。
